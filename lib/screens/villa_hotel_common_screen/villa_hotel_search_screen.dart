@@ -1,7 +1,5 @@
 // ignore_for_file: unnecessary_null_comparison
 
-import 'dart:developer';
-
 import 'package:bta/model/booking.dart';
 import 'package:bta/screens/customedate/CustomeDateScreen.dart';
 import 'package:bta/screens/hotel/hotelLocationSearchScreeen.dart';
@@ -9,10 +7,8 @@ import 'package:bta/screens/hotel/hotel_result_screen.dart';
 import 'package:bta/screens/hotel/hotel_room_select_screen.dart';
 import 'package:bta/screens/villa/villa_result_screen.dart';
 
-import 'package:bta/services/content.service.dart';
 import 'package:bta/utils/ModuleName.dart';
 import 'package:bta/utils/colors.dart';
-import 'package:bta/utils/keys.dart';
 
 import 'package:bta/utils/strings.dart';
 import 'package:bta/widgets/my_button.dart';
@@ -24,8 +20,6 @@ import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'package:url_launcher/url_launcher.dart';
 
 class VillaHotelSearchScreen extends StatefulWidget {
   final isHotel;

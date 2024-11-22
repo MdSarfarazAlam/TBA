@@ -36,7 +36,7 @@ class _InsuranceResultScreenState extends State<InsuranceResultScreen> {
         onPageFinished: (String url) {
           Future.delayed(const Duration(milliseconds: 5000), () {
             controller.runJavaScript(r'''
-          var element = document.querySelector('.sticky');
+          var element = document.querySelector('.hdrRow');
           if (element) {
             // console.log('sarfaraz Element  found==========='+element.length);
             //  console.log('sarfaraz Element  found==========='+element.innerHTML);

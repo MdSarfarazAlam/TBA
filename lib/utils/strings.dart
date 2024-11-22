@@ -19,8 +19,7 @@ class AppStrings {
       "https://booking.travelbta.com/hotels/availablehotels";
 
   static const String villaLink = "https://luxuryvillas.travelbta.com/";
-  static const String toursLink =
-      "https://www.projectexpedition.com/?utm_source=boutiquetransformativeadventures-14249-angie-28225&utm_medium=referral&utm_campaign=tagent";
+  static const String toursLink = "https://tours.travelbta.com/";
 
   static const String insuranceLink =
       "https://partner.roamright.com/?agencycode=BoutiqueTravelAdvisors";
@@ -142,51 +141,4 @@ class AppStrings {
   static const String missingCheckInDate = "Please select a check-in date.";
   static const String missingCheckInTime = "Please select a check-in time.";
   static const String missingCheckOutDate = "Please select check-out date.";
-
-  // hotel_result_screen.dart
-  static const String sort = "Sort";
-  static const String filter = "Filter";
-
-  // covid_screen.dart
-  static const String covid19Safety = "Covid-19  Safety Measures and Policies";
-
-  static const List<FAQ> faqs = [
-    FAQ(
-        question: "Why should we book rooms with SEEYUSOON?",
-        answer:
-            "SEEYUSOON services are a must to avail for everyone out there looking for hotels because - We are not just any online hotel booking site but We have couple friendly rooms available with us on the hourly basis. You can stay as much as according to your work. It's not mandatroy to make more than 24hr booking for small period of time. We offer regular/hourly booking at best price in the market as per your requirements. We make sure that you are only paying for the duration you are staying with us. We do not even discriminate against local and unmarried people to book hotels with us."),
-    FAQ(
-        question:
-            "I have a booking but unfortunately check-in date is not correct, as I have choosed in-correct date by mistake, can you help?",
-        answer:
-            "Yes, you can call to our customer support number +918087198279, they will contact to hotel for booking as per your requirement, or you can cancel you booking and book again."),
-    FAQ(
-        question:
-            "I have booked hotel on your site www.seeyusoon.com but I have not received the confirmation mail, what should I do ?",
-        answer:
-            "Yes, you can call to our customer support number +918087198279, They will tell you everything about your bookings."),
-    FAQ(
-        question: "I want to know do you offer Package Tours?",
-        answer:
-            '''Yes, We offer package tours domestic and international. You can get on our website (https://www.7daystraventure.com/) and choose the wide Varity of packages we offer, if you need any further assistance please do reach out to  customercare@7daystraventure.com ,+91 8087 1982 79 / +91 9763 9174 31'''),
-    FAQ(
-        question:
-            "I want to make a booking but unfortunately my card is not working, Can you Help?",
-        answer:
-            "Yes, if you have problems with your credit card, we accept offline payments / wallets /UPI as well."),
-    FAQ(
-        question:
-            "I had make a regular booking on your site, but unfortunately as I got some personal issue, I had to cancel my travel, can I get refund.",
-        answer:
-            "Sorry to know about this, Yes you will get a 100% refund if you cancel 24hr prior of that booking in case of regular booking."),
-    FAQ(
-        question:
-            "Can couple/people with local id book hotel rooms with seeyusoon??",
-        answer:
-            "Yes for sure. People with local ids are welcomed in most of our partnered hotels. You need to look for Local ID Accepted tag on hotel allowing couples on local ID."),
-    FAQ(
-        question: "Can pre booking any of the  Hotels to save cost ?",
-        answer:
-            "Hmm..!! Yes advance booking would help you to save cost to some extent, but it depends on the season you book. "),
-  ];
 }

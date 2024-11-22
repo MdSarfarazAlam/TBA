@@ -36,7 +36,7 @@ class _TourResultScreenState extends State<TourResultScreen> {
         onPageFinished: (String url) {
           Future.delayed(const Duration(milliseconds: 5000), () {
             controller.runJavaScript(r'''
-          var element = document.querySelector('.sticky');
+          var element = document.querySelector('.w-full');
           if (element) {
             // console.log('sarfaraz Element  found==========='+element.length);
             //  console.log('sarfaraz Element  found==========='+element.innerHTML);
@@ -44,7 +44,7 @@ class _TourResultScreenState extends State<TourResultScreen> {
           } else {
             console.log('sarfaraz Element not found');
           }
-           var element2 = document.querySelector('.p-3');
+           var element2 = document.querySelector('.py-10');
           if (element2) {
             console.log('sarfaraz 2 Element  found==========='+element2.length);
              console.log('sarfaraz 2 Element  found==========='+element2.innerHTML);

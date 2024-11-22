@@ -1,6 +1,7 @@
 import 'package:bta/screens/aiItinearyscreen/aiItinearyScreen.dart';
 import 'package:bta/screens/insurance/insuranceResultScreen.dart';
 import 'package:bta/screens/tours/tourResultScreen.dart';
+import 'package:bta/screens/villa/villa_result_screen.dart';
 import 'package:bta/screens/villa_hotel_common_screen/villa_hotel_search_screen.dart';
 import 'package:bta/utils/assets.dart';
 import 'package:bta/utils/colors.dart';
@@ -286,9 +287,8 @@ class Category extends StatelessWidget {
       onPressed: () {
         FocusScope.of(context).unfocus();
         if (title == "Hotels" || title == "Villas") {
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => VillaHotelSearchScreen(
-                  isHotel: title == "Hotels" ? true : false)));
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => VillaResultScreen()));
         } else if (title == "Tours") {
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const TourResultScreen()));

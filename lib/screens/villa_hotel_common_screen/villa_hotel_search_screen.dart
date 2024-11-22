@@ -1,6 +1,5 @@
 // // ignore_for_file: unnecessary_null_comparison
 
-<<<<<<< HEAD
 // import 'dart:developer';
 
 // import 'package:bta/model/booking.dart';
@@ -14,17 +13,6 @@
 // import 'package:bta/utils/ModuleName.dart';
 // import 'package:bta/utils/colors.dart';
 // import 'package:bta/utils/keys.dart';
-=======
-import 'package:bta/model/booking.dart';
-import 'package:bta/screens/customedate/CustomeDateScreen.dart';
-import 'package:bta/screens/hotel/hotelLocationSearchScreeen.dart';
-import 'package:bta/screens/hotel/hotel_result_screen.dart';
-import 'package:bta/screens/hotel/hotel_room_select_screen.dart';
-import 'package:bta/screens/villa/villa_result_screen.dart';
-
-import 'package:bta/utils/ModuleName.dart';
-import 'package:bta/utils/colors.dart';
->>>>>>> b0124e4b7b731591bc1d65b20a62b60005ce7c52
 
 // import 'package:bta/utils/strings.dart';
 // import 'package:bta/widgets/my_button.dart';
@@ -37,17 +25,11 @@ import 'package:bta/utils/colors.dart';
 // import 'package:provider/provider.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 
-<<<<<<< HEAD
 // import 'package:url_launcher/url_launcher.dart';
 
 // class VillaHotelSearchScreen extends StatefulWidget {
 //   final isHotel;
 //   const VillaHotelSearchScreen({super.key, required this.isHotel});
-=======
-class VillaHotelSearchScreen extends StatefulWidget {
-  final isHotel;
-  const VillaHotelSearchScreen({super.key, required this.isHotel});
->>>>>>> b0124e4b7b731591bc1d65b20a62b60005ce7c52
 
 //   @override
 //   State<VillaHotelSearchScreen> createState() => _VillaHotelSearchScreenState();

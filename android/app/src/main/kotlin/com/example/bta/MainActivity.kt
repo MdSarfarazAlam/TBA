@@ -1,4 +1,4 @@
-package com.Janetsemenova.app
+package com.bta.bta
 
 import io.flutter.embedding.android.FlutterActivity
 

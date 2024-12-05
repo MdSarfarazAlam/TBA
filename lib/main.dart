@@ -1,5 +1,6 @@
 import 'package:bta/model/booking.dart';
 import 'package:bta/screens/home/homeScreen.dart';
+import 'package:bta/screens/splashscreen/splashscreen.dart';
 import 'package:bta/services/local_storage.service.dart';
 import 'package:bta/utils/ModuleName.dart';
 import 'package:bta/utils/colors.dart';
@@ -11,49 +12,23 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-bool isFirstTime = true;
-// Price? price;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // //await for startup works here.
-  // // log(DateTime.now().toISTzone().toString());
   LocalStorageService localStorageService = LocalStorageService();
   await localStorageService.init();
-  isFirstTime =
-      LocalStorageService.prefs!.getBool(AppStrings.isFirstTime) ?? true;
-  //UserServices userServices = UserServices();
-
   String? departureDate = DateFormat('dd MMM EE,yyyy')
       .format(DateTime.now().add(const Duration(days: 2)));
 
   String? returnDate = DateFormat('dd MMM EE,yyyy')
       .format(DateTime.now().add(const Duration(days: 4)));
-  //ContentServices contentServices = ContentServices();
   Booking booking =
       Booking.empty(departureDate.split(",")[0], returnDate.split(",")[0]);
 
-  // await contentServices.init();
-  // Future.delayed(const Duration(seconds: 1), () {});
   runApp(MultiProvider(providers: [
-    //ChangeNotifierProvider(create: (_) => userServices),
-
-    // ChangeNotifierProvider(create: (_) => hotelServices),
     ChangeNotifierProvider(create: (_) => ModuleName()),
-    // Provider(create: (_) => RazorPayServices()),
-    // Provider(create: (_) => RequestServices()),
-    // Provider(create: (_) => ownerServices),
-    //   Provider(create: (_) => contentServices),
     Provider(create: (_) => booking),
   ], child: const App()));
-
-  // runApp(const App());
-
-  // SystemChrome.setSystemUIOverlayStyle(
-  //   const SystemUiOverlayStyle(
-  //     statusBarColor: AppColors.primary,
-  //   ),
-  // );
 }
 
 class App extends StatelessWidget {
@@ -90,34 +65,16 @@ class App extends StatelessWidget {
                 systemOverlayStyle: SystemUiOverlayStyle.light,
               ),
               iconTheme: const IconThemeData(
-                // opacity: .5,
                 color: Colors.white,
               ),
               visualDensity: VisualDensity.adaptivePlatformDensity,
               tabBarTheme: const TabBarTheme(
-                  // overlayColor: MaterialStateProperty.all(Colors.amber),
-                  // labelColor: Colors.pink[800],
-                  // labelStyle:
-                  //     TextStyle(color: Colors.pink[800]), // color for text
                   indicator: UnderlineTabIndicator(
-                      // color for indicator (underline)
                       borderSide: BorderSide(
                 color: Colors.transparent,
               ))),
-              // colorScheme: ColorScheme.fromSwatch().copyWith(
-              //     secondary: const Color.fromARGB(255, 199, 209, 65)),
-
-              // deprecated,
             ),
-            home: const HomeScreen(),
-            // home: OwnerServices.currentOwner != null
-            //     ? OwnerProfileScreen(
-            //         owner: OwnerServices.currentOwner!, price: price!)
-            //     : UserServices.currentUser != null
-            //         ? const DashboardScreen()
-            //         : !isFirstTime
-            //             ? const LoginScreen()
-            //             : const OnboardingScreen(),
+            home: const SplashScreen(),
           );
         });
       },

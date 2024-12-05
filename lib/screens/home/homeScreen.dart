@@ -1,4 +1,7 @@
 import 'package:bta/screens/aiItinearyscreen/aiItinearyScreen.dart';
+import 'package:bta/screens/hotel/hotelLocationSearchScreeen.dart';
+import 'package:bta/screens/hotel/hotel_result_screen.dart';
+import 'package:bta/screens/hotel/hotel_room_select_screen.dart';
 import 'package:bta/screens/insurance/insuranceResultScreen.dart';
 import 'package:bta/screens/tours/tourResultScreen.dart';
 import 'package:bta/screens/villa/villa_result_screen.dart';
@@ -8,6 +11,7 @@ import 'package:bta/utils/colors.dart';
 import 'package:bta/utils/screen_size.dart';
 import 'package:bta/utils/strings.dart';
 import 'package:bta/widgets/bottom_screens/home/Info_card.dart';
+import 'package:bta/widgets/hotel.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
 
@@ -286,9 +290,13 @@ class Category extends StatelessWidget {
       ),
       onPressed: () {
         FocusScope.of(context).unfocus();
-        if (title == "Hotels" || title == "Villas") {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => VillaResultScreen()));
+        if (title == "Hotels") {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => VillaHotelSearchScreen(
+                  isHotel: title == "Hotels" ? true : false)));
+        } else if (title == "Villas") {
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const VillaResultScreen()));
         } else if (title == "Tours") {
           Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const TourResultScreen()));

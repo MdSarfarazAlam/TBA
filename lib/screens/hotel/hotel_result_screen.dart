@@ -72,7 +72,8 @@ class _HotelResultScreenState extends State<HotelResultScreen> {
     Map<String, dynamic> passengers = {
       "Adults": booking.adults,
       "Children": booking.children,
-      "Index": 1
+      "Index": 1,
+      "ChildAges": ""
     };
 
     // Encode the passengers object to JSON and then URL encode it

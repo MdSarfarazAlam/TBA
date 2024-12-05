@@ -93,23 +93,7 @@ class AppStrings {
   static const String profile = "Profile";
   // onboarding.dart
   // splash_view.dart
-  static const String splashView =
-      "By 7days Traventure (OPC) Private Limited incorporated in Maharashtra and Accreditation by IATA TIDS  (Travel Industry Designator Service).";
-  static const String letsBegin = "Let's begin";
-  // relax_view.dart
-  static const String relaxView =
-      "Choose From a Wide Range of Properties Which SeeYuSoon Offers. Search Now! Book your Hotel in India online. Save up to 70% on your hourly hotels.";
-  // care_view.dart
-  static const String care = "Business Travellers";
-  static const String careView =
-      "Hourly Hotel / Micro stays are also of interest to business travellers who may need a place to work, to freshen up between meetings or to catch up on sleep when jet-lagged.";
-  // mood_diary_view.dart
-  static const String enjoyment = "Couple Friendly";
-  static const String moodDiaryText =
-      "Couple friendly hotels that accept local IDs, offer same day check-ins, ensure utmost privacy & more at affordable prices.";
-  static const String welcome = "Welcome";
-  static const String welcomeView =
-      "Stay organised and live stress-free Stay organised and live stress-free";
+
   static const String skip = "Skip";
   // hotel_search_screen.dart
   static const String searchHotelTitle = "Search Hotel";

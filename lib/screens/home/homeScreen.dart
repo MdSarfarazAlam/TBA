@@ -60,23 +60,6 @@ class _HomeScreenState extends State<HomeScreen>
         slivers: <Widget>[
           SliverAppBar(
             expandedHeight: 250.0,
-            //backgroundColor: Colors.cyan,
-            // leading: IconButton(
-            //   icon: const Icon(
-            //     Icons.menu,
-            //     color: Colors.white,
-            //   ),
-            //   onPressed: () {},
-            // ),
-            // actions: <Widget>[
-            //   IconButton(
-            //     icon: const Icon(
-            //       Icons.notifications,
-            //       color: Colors.white,
-            //     ),
-            //     onPressed: () {},
-            //   ),
-            // ],
             floating: true,
             flexibleSpace: ListView(
               children: <Widget>[
@@ -98,15 +81,15 @@ class _HomeScreenState extends State<HomeScreen>
           SliverToBoxAdapter(
             child: _buildCategories(),
           ),
-          const SliverToBoxAdapter(
-            child: SizedBox(
-              height: 20.0,
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: aiItinearyBTN(
-                AppStrings.manageBookingLink, AppStrings.manageBookingText),
-          ),
+          // const SliverToBoxAdapter(
+          //   child: SizedBox(
+          //     height: 20.0,
+          //   ),
+          // ),
+          // SliverToBoxAdapter(
+          //   child: aiItinearyBTN(
+          //       AppStrings.manageBookingLink, AppStrings.manageBookingText),
+          // ),
           const SliverToBoxAdapter(
             child: SizedBox(
               height: 10.0,
@@ -140,17 +123,6 @@ class _HomeScreenState extends State<HomeScreen>
                       tileMode: TileMode.clamp)),
             ),
           ),
-
-          // SliverToBoxAdapter(
-          //   child: SizedBox(
-          //     height: 150,
-          //     width: double.infinity,
-          //     child: Image.asset(
-          //       AppAssets.bottom1,
-          //       fit: BoxFit.cover,
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );
@@ -213,36 +185,31 @@ class _HomeScreenState extends State<HomeScreen>
 
   Widget _buildCategories() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0),
       child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // Two items per row
+          crossAxisCount: 3, // Two items per row
           childAspectRatio: 1, // Square items
-          crossAxisSpacing: 15, // Space between columns
-          mainAxisSpacing: 15, // Space between rows
+          crossAxisSpacing: 5, // Space between columns
+          mainAxisSpacing: 1, // Space between rows
         ),
-        itemCount: 4, // Number of items
+        itemCount: 3, // Number of items
         shrinkWrap: true, // Allow grid to take up only necessary space
         physics:
             const NeverScrollableScrollPhysics(), // Prevent scrolling of GridView
         itemBuilder: (context, index) {
           return Category(
-            backgroundColor: AppColors.white,
-            imageUrl: index == 0
-                ? AppAssets.hotel
-                : index == 1
-                    ? AppAssets.villa
-                    : index == 2
-                        ? AppAssets.tour
-                        : AppAssets.insurance,
-            title: index == 0
-                ? AppStrings.hotel
-                : index == 1
-                    ? AppStrings.villa
-                    : index == 2
-                        ? AppStrings.experiences
-                        : AppStrings.insurance,
-          );
+              backgroundColor: AppColors.white,
+              imageUrl: index == 0
+                  ? AppAssets.hotel
+                  : index == 1
+                      ? AppAssets.villa
+                      : AppAssets.tour,
+              title: index == 0
+                  ? AppStrings.hotel
+                  : index == 1
+                      ? AppStrings.villa
+                      : AppStrings.experiences);
         },
       ),
     );
